@@ -1,0 +1,7 @@
+/.idea/
+/.vscode/
+/composer.phar
+/vendor/
+/.env
+/.env.local
+/cache/
