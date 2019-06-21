@@ -10,6 +10,6 @@ class OneSimpleTest extends TestCase
 {
     public function testSum()
     {
-        $this->assertEquals(2, 1+1);
+        $this->assertEquals(2, 1 + 1);
     }
 }
