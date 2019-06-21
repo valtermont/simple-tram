@@ -1,0 +1,16 @@
+{
+  "name": "provectus/tram",
+  "license": "proprietary",
+  "type": "project",
+  "require": {
+    "php": "^7.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "8.2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Provectus\\Tram\\": "src"
+    }
+  }
+}
