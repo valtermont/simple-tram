@@ -12,5 +12,10 @@
     "psr-4": {
       "Provectus\\Tram\\": "src"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Provectus\\Tram\\Tests\\": "tests"
+    }
   }
 }
