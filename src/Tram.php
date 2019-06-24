@@ -83,13 +83,22 @@ class Tram
         $this->timeTable = $table;
     }
 
+    /**
+     * @throws ActionDoorError
+     */
     public function move()
     {
+        if ($this->isDoorOpen) {
+            throw new ActionDoorError('You cannot rides with open door!');
+        }
         $this->isStop = false;
     }
 
     public function stop()
     {
+        if ($this->onRoute) {
+            $this->stationIndex++;
+        }
         $this->isStop = true;
     }
 
