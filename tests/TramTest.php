@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Provectus\Tram\Tests;
-
 
 use PHPUnit\Framework\TestCase;
 use Provectus\Tram\Driver\DriverImpl;
@@ -34,5 +32,63 @@ class TramTest extends TestCase
 
     }
 
+    public function testOpenDoor()
+    {
 
+    }
+
+    public function testSetRoute()
+    {
+
+    }
+
+    public function testSetTimeTable()
+    {
+
+    }
+
+    public function testFinishRoute()
+    {
+
+    }
+
+    public function testStop()
+    {
+
+    }
+
+    public function testMove()
+    {
+
+    }
+
+    public function testCloseDoor()
+    {
+
+    }
+
+    public function testGetCurrentStation()
+    {
+
+    }
+
+    public function testTakePassengers()
+    {
+
+    }
+
+    public function testLetPassengers()
+    {
+
+    }
+
+    public function testStartRoute()
+    {
+
+    }
+
+    public function testSetDriver()
+    {
+
+    }
 }

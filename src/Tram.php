@@ -29,7 +29,7 @@ class Tram
     private $timeTable;
 
     /** @var bool */
-    private $onRoute = false;
+    private $isOnRoute = false;
 
     /** @var bool */
     private $isStop = true;
@@ -65,7 +65,7 @@ class Tram
      */
     public function setRoute(Route $route)
     {
-        if ($this->onRoute) {
+        if ($this->isOnRoute) {
             throw new ModifyTramError('You cannot change route, when you on route!');
         }
         $this->route = $route;
@@ -77,7 +77,7 @@ class Tram
      */
     public function setTimeTable(TimeTable $table)
     {
-        if ($this->onRoute) {
+        if ($this->isOnRoute) {
             throw new ModifyTramError('You cannot change your timetable, when you on route!');
         }
         $this->timeTable = $table;
@@ -96,7 +96,7 @@ class Tram
 
     public function stop()
     {
-        if ($this->onRoute) {
+        if ($this->isOnRoute) {
             $this->stationIndex++;
         }
         $this->isStop = true;
@@ -158,7 +158,7 @@ class Tram
      */
     public function getCurrentStation()
     {
-        if (!$this->onRoute) {
+        if (!$this->isOnRoute) {
             throw new TramNotOnRouteError('You need start route!');
         }
         return $this->route->getStations()[$this->stationIndex];
@@ -178,12 +178,12 @@ class Tram
         if ($this->timeTable === null) {
             throw new StartRouteError('You cannot start route without timetable!');
         }
-        $this->onRoute = true;
+        $this->isOnRoute = true;
     }
 
     public function finishRoute()
     {
-        $this->onRoute = false;
+        $this->isOnRoute = false;
     }
 
     /**
