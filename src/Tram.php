@@ -6,6 +6,7 @@ namespace Provectus\Tram;
 
 use Provectus\Tram\Driver\Driver;
 use Provectus\Tram\Route\Route;
+use Provectus\Tram\Route\Station;
 use Provectus\Tram\TimeTable\TimeTable;
 
 class Tram
@@ -152,8 +153,13 @@ class Tram
         $this->passengersCount -= $count;
     }
 
+    public function getFreePlaces(): int
+    {
+        return $this->placesCount - $this->passengersCount;
+    }
+
     /**
-     * @return mixed
+     * @return Station
      * @throws TramNotOnRouteError
      */
     public function getCurrentStation()
