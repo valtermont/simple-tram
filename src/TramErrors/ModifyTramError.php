@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Provectus\Tram;
+namespace Provectus\Tram\TramErrors;
 
 
 use Exception;

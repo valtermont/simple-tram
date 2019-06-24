@@ -8,6 +8,11 @@ use Provectus\Tram\Driver\Driver;
 use Provectus\Tram\Route\Route;
 use Provectus\Tram\Route\Station;
 use Provectus\Tram\TimeTable\TimeTable;
+use Provectus\Tram\TramErrors\ActionDoorError;
+use Provectus\Tram\TramErrors\ModifyTramError;
+use Provectus\Tram\TramErrors\NoPlacesError;
+use Provectus\Tram\TramErrors\StartRouteError;
+use Provectus\Tram\TramErrors\TramNotOnRouteError;
 
 class Tram
 {
@@ -97,6 +102,16 @@ class Tram
     public function getAllPlaces(): int
     {
         return $this->placesCount;
+    }
+
+    public function getDriver(): Driver
+    {
+        return $this->driver;
+    }
+
+    public function getTimeTable(): TimeTable
+    {
+        return $this->timeTable;
     }
 
     /**

@@ -5,6 +5,7 @@ namespace Provectus\Tram\Tests;
 use PHPUnit\Framework\TestCase;
 use Provectus\Tram\Driver\DriverImpl;
 use Provectus\Tram\Route\SimpleRoute;
+use Provectus\Tram\TimeTable\TimeTable;
 use Provectus\Tram\Tram;
 
 class TramTest extends TestCase
@@ -20,16 +21,20 @@ class TramTest extends TestCase
         $driver = new DriverImpl('John', 'Dow');
         $route = new SimpleRoute('2');
         $tram = new Tram('1111', 50);
+        $timeTable = $this->createMock(TimeTable::class);
         $tram->setDriver($driver);
         $tram->setRoute($route);
         $tram->setTimeTable($timeTable);
-
         $number = $tram->getNumber();
+        $this->assertSame('1111', $number);
         $routeNumber = $tram->getRouteNumber();
-        $placeCount = $tram->getPlacesCount();
-        $driver = $tram->getDriver();
+        $this->assertSame('2', $routeNumber);
+        $placeCount = $tram->getAllPlaces();
+        $this->assertSame(50, $placeCount);
+        $driverName = $tram->getDriver()->getFullName();
+        $this->assertSame('John Dow', $driverName);
         $timeTable = $tram->getTimeTable();
-
+        $this->assertNotNull($timeTable);
     }
 
     public function testOpenDoor()
