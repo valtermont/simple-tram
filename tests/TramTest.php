@@ -6,7 +6,7 @@ namespace Provectus\Tram\Tests;
 
 use PHPUnit\Framework\TestCase;
 use Provectus\Tram\Driver\DriverImpl;
-use Provectus\Tram\SimpleRoute;
+use Provectus\Tram\Route\SimpleRoute;
 use Provectus\Tram\Tram;
 
 class TramTest extends TestCase

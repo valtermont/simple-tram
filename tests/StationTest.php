@@ -3,8 +3,8 @@
 namespace Provectus\Tram\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Provectus\Tram\EmptyStationName;
-use Provectus\Tram\Station;
+use Provectus\Tram\Route\EmptyStationName;
+use Provectus\Tram\Route\Station;
 
 class StationTest extends TestCase
 {

@@ -6,7 +6,7 @@ namespace Provectus\Tram;
 
 use Exception;
 
-class EmptyStationName extends Exception
+class ModifyTramError extends Exception
 {
 
 }

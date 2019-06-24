@@ -6,7 +6,7 @@ namespace Provectus\Tram;
 
 use Exception;
 
-class WrongRouteNumber extends Exception
+class NoPlacesError extends Exception
 {
 
 }
