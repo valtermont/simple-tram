@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Provectus\Tram;
+namespace Provectus\Tram\Driver;
 
 
 class DriverImpl implements Driver

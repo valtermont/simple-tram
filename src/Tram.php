@@ -4,6 +4,8 @@
 namespace Provectus\Tram;
 
 
+use Provectus\Tram\Driver\Driver;
+
 class Tram
 {
     private $number;

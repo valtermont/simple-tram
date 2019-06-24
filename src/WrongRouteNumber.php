@@ -6,6 +6,7 @@ namespace Provectus\Tram;
 
 use Exception;
 
-class WrongDriverName extends Exception
+class WrongRouteNumber extends Exception
 {
+
 }

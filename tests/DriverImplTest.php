@@ -3,8 +3,8 @@
 namespace Provectus\Tram\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Provectus\Tram\DriverImpl;
-use Provectus\Tram\WrongDriverName;
+use Provectus\Tram\Driver\DriverImpl;
+use Provectus\Tram\Driver\WrongDriverName;
 
 class DriverImplTest extends TestCase
 {

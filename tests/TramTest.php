@@ -5,7 +5,8 @@ namespace Provectus\Tram\Tests;
 
 
 use PHPUnit\Framework\TestCase;
-use Provectus\Tram\DriverImpl;
+use Provectus\Tram\Driver\DriverImpl;
+use Provectus\Tram\SimpleRoute;
 use Provectus\Tram\Tram;
 
 class TramTest extends TestCase
@@ -19,6 +20,7 @@ class TramTest extends TestCase
     public function testTramProperties()
     {
         $driver = new DriverImpl('John', 'Dow');
+        $route = new SimpleRoute('2');
         $tram = new Tram('1111', 50);
         $tram->setDriver($driver);
         $tram->setRoute($route);
