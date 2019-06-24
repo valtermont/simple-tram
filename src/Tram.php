@@ -84,6 +84,21 @@ class Tram
         $this->timeTable = $table;
     }
 
+    public function getNumber(): string
+    {
+        return $this->number;
+    }
+
+    public function getRouteNumber(): string
+    {
+        return $this->route->getNumber();
+    }
+
+    public function getAllPlaces(): int
+    {
+        return $this->placesCount;
+    }
+
     /**
      * @throws ActionDoorError
      */

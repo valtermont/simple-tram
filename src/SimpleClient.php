@@ -59,7 +59,14 @@ class SimpleClient
 
     private function printTramState()
     {
+        $number = $this->tram->getNumber();
+        $routeNumber = $this->tram->getRouteNumber();
+        $placeCount = $this->tram->getAllPlaces();
+        echo 'Tram number: ' . $number . "\n";
+        echo 'Route number: ' . $routeNumber . "\n";
         echo 'Current station: ' . $this->tram->getCurrentStation()->getName() . "\n";
+        echo 'All places: ' . $placeCount . "\n";
         echo 'Free places: ' . $this->tram->getFreePlaces() . "\n";
+        echo '-----------------------' . "\n";
     }
 }
